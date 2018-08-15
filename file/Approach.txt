@@ -1,0 +1,6 @@
+Assumptions:
+1. Provided JSON is chronological 
+2. Homepage is http://foo.bar.com/p1. 
+3. Cross-linking: Any link without a parent reference is error
+4. Links repeated more than once are skipped
+5. Links missing from success cannot be reached, dead links
