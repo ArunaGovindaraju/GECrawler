@@ -16,9 +16,9 @@ import groovy.json.JsonSlurper
 class JSONCrawler {
 	static String HOME="http://foo.bar.com/p1"
 
-	static String FILE1 = "file/Internet1.json";
-	static String FILE2 = "file/Internet2.json";
-	static String FILE3 = "file/Internet3.json";
+	static String FILE1 = "files/Internet1.json";
+	static String FILE2 = "files/Internet2.json";
+	static String FILE3 = "files/Internet3.json";
 	static String DEFAULT_ENCODING = "UTF-8"
 	static String PAGES = "pages"
 	static String ADDRESS = "address"
