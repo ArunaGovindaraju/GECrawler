@@ -2,5 +2,4 @@
 https://www.tutorialspoint.com/groovy/groovy_maps.htm
 http://docs.groovy-lang.org/next/html/documentation/working-with-collections.html
 http://docs.groovy-lang.org/latest/html/documentation/core-semantics.html#gpath_expressions
-http://mrhaki.blogspot.com/2011/09/groovy-goodness-collect-on-nested.html
 https://www.infoq.com/presentations/Groovy-Best-Practices
