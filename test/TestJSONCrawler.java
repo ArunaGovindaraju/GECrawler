@@ -1,4 +1,4 @@
-package com.ge.crawler;
+
 import static org.junit.Assert.*;
 
 import org.junit.Test;

@@ -2,6 +2,7 @@ package com.ge.crawler
 
 import java.util.Collection
 import java.util.List
+import groovyx.gpars.*
 
 import groovy.json.JsonSlurper
 
@@ -23,6 +24,11 @@ class JSONCrawler {
 	static String ADDRESS = "address"
 	static String LINKS = "links"
 	
+	/** 
+	 * Main Class that feeds three different input files to 
+	 * JSONCraler#buildOutputLinks
+	 * @param s
+	 */
 	public static void main (String [] s) {
 		
 		def jsonSlurper = new JsonSlurper()
@@ -75,12 +81,12 @@ class JSONCrawler {
 			linksToCrawl.eachWithIndex{ String link, idx ->
 				
 				if (success.contains(link) ) {
-					//already visited
+					//return/continue if already visited
 					skipped.add(link)
 					return
 				}
 				if (!parents.contains(link)) {
-					//Link does not have a parent 
+					//return/continue if the link is not a parent 
 					errorUrls.add(link)
 					return
 				}
@@ -98,11 +104,12 @@ class JSONCrawler {
 		
 		buildList = buildList.trampoline()
 		buildList(startAddress)
-		
-		println "Success=$success"
-		//Find missing urls 
+
+		//Find Urls not index, skipped.
 		List missedLink = JSONCrawler.findMissingUrls(allLinks, success)
 		errorUrls.addAll(missedLink)
+
+		println "Success=$success"
 		println "Skipped=$skipped"
 		println "Error=$errorUrls"
 		
@@ -120,7 +127,6 @@ class JSONCrawler {
 		if (allLinks.size() > successLinks.size()) {
 			 diff = allLinks.minus(successLinks)
 		 }
-//		 println "Diff=$diff"
 		 return diff.collect().flatten()
 	}
 	
@@ -132,9 +138,7 @@ class JSONCrawler {
 	 * @return
 	 */
 	static boolean isParent(String link, List parents) {
-		
 		boolean isParent = false
-		
 		if (parents.contains(link)) {
 			isParent=true
 		}
