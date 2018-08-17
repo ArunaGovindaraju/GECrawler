@@ -1,0 +1,15 @@
+files/Internet3.json
+files/Internet1.json
+files/Internet2.json
+For files/Internet3.json :: Success=[http://foo.bar.com/p1, http://foo.bar.com/p2, http://foo.bar.com/p3]
+For files/Internet2.json :: Success=[http://foo.bar.com/p1, http://foo.bar.com/p2, http://foo.bar.com/p3, http://foo.bar.com/p4, http://foo.bar.com/p5]
+For files/Internet3.json :: Skipped=[]
+For files/Internet2.json :: Skipped=[http://foo.bar.com/p1]
+For files/Internet1.json :: Success=[http://foo.bar.com/p1, http://foo.bar.com/p4, http://foo.bar.com/p2, http://foo.bar.com/p5, http://foo.bar.com/p6]
+For files/Internet1.json :: Skipped=[http://foo.bar.com/p2, http://foo.bar.com/p1, http://foo.bar.com/p4, http://foo.bar.com/p5]
+For files/Internet3.json :: Error=[http://foo.bar.com/p7, http://foo.bar.com/p4, http://foo.bar.com/p5, http://foo.bar.com/p6]
+For files/Internet2.json :: Error=[http://foo.bar.com/p6]
+For files/Internet1.json :: Error=[http://foo.bar.com/p3, http://foo.bar.com/p7]
+Links from files/Internet1.json crawled successfully!
+Links from files/Internet2.json crawled successfully!
+Links from files/Internet3.json crawled successfully!
