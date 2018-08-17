@@ -1,20 +1,17 @@
 # GECrawler
-Galvanize GE
+This project is to crawl and follow links in JSON and find the successful, repetitive and error links. This is developed using Groovy scripts. 
 
-This project to crawl a links in JSON and find the successful vs. error links is written using 
-#Groovy 2.5
+#Groovy Version
+- Groovy 2.5
 
 # Cool Stuff in Groovy 
-JSONSlurper & File parser
-Closure & Trampoline for Recursive Inner Class
-GPARS library & Parallel allows us to crawl multiple files in parallel
-- GParsPool.withPool
-- Collection.eachParallel
+JSONSlurper & File parser to consume files.
+Closure & Trampoline for Recursive Inner Class calls. Uses GPARS pool to asynchronous navigate collection links.
+GPARSPool and eachParallel allows us to crawl collection of files in parallel
 List Operations for Collect, Flatten, Add & Minus
-Less Verbose and easy append free print statements
 
 # Unit testing in Groovy
-Leveraged Groovy assertions 
+Leverage Groovy assertions 
 Used Object MOCKS and compared expected results [check validate{} closure]
 
  
