@@ -167,26 +167,26 @@ class JSONCrawler {
 	
 	
 //	Internet1 crawl results
-	static final INTERNET1_SUCCESS=
+	static final MOCK_INTERNET1_SUCCESS=
 		["http://foo.bar.com/p1", "http://foo.bar.com/p2",
 		"http://foo.bar.com/p4", "http://foo.bar.com/p5",
 		"http://foo.bar.com/p6"]
 	
-	static final INTERNET1_SKIPPED=
+	static final MOCK_INTERNET1_SKIPPED=
 		["http://foo.bar.com/p2",
 		"http://foo.bar.com/p4","http://foo.bar.com/p1",
 		"http://foo.bar.com/p5"]
-	static final INTERNET1_ERROR=
+	static final MOCK_INTERNET1_ERROR=
 		["http://foo.bar.com/p3", "http://foo.bar.com/p7"]
 	
 //	Internet2 crawl results	
-	static final INTERNET2_SUCCESS=
+	static final MOCK_INTERNET2_SUCCESS=
 		["http://foo.bar.com/p1", "http://foo.bar.com/p2",
 		"http://foo.bar.com/p3", "http://foo.bar.com/p4",
 		"http://foo.bar.com/p5"]
 	
-	static final INTERNET2_SKIPPED=["http://foo.bar.com/p1"]
+	static final MOCK_INTERNET2_SKIPPED=["http://foo.bar.com/p1"]
 
-		//Object modified to include p6 since this cannot be reached.
-	static final INTERNET2_ERROR=["http://foo.bar.com/p6"]
+	//Object modified to include p6 since this cannot be reached.
+	static final MOCK_INTERNET2_ERROR=["http://foo.bar.com/p6"]
 }

@@ -7,10 +7,15 @@ This project to crawl a links in JSON and find the successful vs. error links is
 # Cool Stuff in Groovy 
 JSONSlurper & File parser
 Closure & Trampoline for Recursive Inner Class
-GPARS library & Parallel  
+GPARS library & Parallel allows us to crawl multiple files in parallel
+- GParsPool.withPool
+- Collection.eachParallel
 List Operations for Collect, Flatten, Add & Minus
 Less Verbose and easy append free print statements
-In line assert statements
 
-#Feature Not used
-recursive memorize is removed since a visited link is ignored.
+# Unit testing in Groovy
+Leveraged Groovy assertions 
+Used Object MOCKS and compared expected results [check validate{} closure]
+
+ 
+
