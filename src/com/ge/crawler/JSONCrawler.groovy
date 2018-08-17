@@ -120,14 +120,23 @@ class JSONCrawler {
 		// Inlined test case
 		def validate ={
 			if (filePath.equalsIgnoreCase(JSONCrawler.FILE1)) {
-				assert successUrls.containsAll(INTERNET1_SUCCESS)
-				assert skippedUrls.collect().containsAll(INTERNET1_SKIPPED)
-				assert errorUrls.collect().containsAll(INTERNET1_ERROR)
+				assert successUrls.containsAll(MOCK_INTERNET1_SUCCESS)
+				assert skippedUrls.collect().containsAll(MOCK_INTERNET1_SKIPPED)
+				assert errorUrls.collect().containsAll(MOCK_INTERNET1_ERROR)
 				println "Links from $filePath crawled successfully!"
-			} else if (filePath.equalsIgnoreCase(JSONCrawler.FILE2)) {
-				assert successUrls.containsAll(INTERNET2_SUCCESS)
-				assert skippedUrls.collect().containsAll(INTERNET2_SKIPPED)
-				assert errorUrls.collect().containsAll(INTERNET2_ERROR)
+			} 
+			
+			if (filePath.equalsIgnoreCase(JSONCrawler.FILE2)) {
+				assert successUrls.containsAll(MOCK_INTERNET2_SUCCESS)
+				assert skippedUrls.collect().containsAll(MOCK_INTERNET2_SKIPPED)
+				assert errorUrls.collect().containsAll(MOCK_INTERNET2_ERROR)
+				println "Links from $filePath crawled successfully!"
+			}
+			
+			if (filePath.equalsIgnoreCase(JSONCrawler.FILE3)) {
+				assert successUrls.containsAll(MOCK_INTERNET3_SUCCESS)
+				assert skippedUrls.collect().containsAll(MOCK_INTERNET3_SKIPPED)
+				assert errorUrls.collect().containsAll(MOCK_INTERNET3_ERROR)
 				println "Links from $filePath crawled successfully!"
 			}
 		}
@@ -189,4 +198,12 @@ class JSONCrawler {
 
 	//Object modified to include p6 since this cannot be reached.
 	static final MOCK_INTERNET2_ERROR=["http://foo.bar.com/p6"]
+	
+	//	Internet3 crawl results
+	static final MOCK_INTERNET3_SUCCESS=["http://foo.bar.com/p1", "http://foo.bar.com/p2", "http://foo.bar.com/p3"]
+	
+	static final MOCK_INTERNET3_SKIPPED=[]
+
+	//Object modified to include p6 since this cannot be reached.
+	static final MOCK_INTERNET3_ERROR=["http://foo.bar.com/p7", "http://foo.bar.com/p4", "http://foo.bar.com/p5", "http://foo.bar.com/p6"]
 }
