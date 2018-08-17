@@ -109,16 +109,17 @@ class JSONCrawler {
 		List missedLink = JSONCrawler.findMissingUrls(allLinks, successUrls)
 		errorUrls.addAll(missedLink)
 
-		println "For $filePath :: Success=$successUrls"
-		println "For $filePath :: Skipped=$skippedUrls"
-		println "For $filePath :: Error=$errorUrls"
-		
-		assert !successUrls.equals(null)
-		assert !skippedUrls.equals(null)
-		assert !errorUrls.equals(null)
 		
 		// Inlined test case
 		def validate ={
+			println "For $filePath :: Success=$successUrls"
+			println "For $filePath :: Skipped=$skippedUrls"
+			println "For $filePath :: Error=$errorUrls"
+	
+			assert !successUrls.equals(null)
+			assert !skippedUrls.equals(null)
+			assert !errorUrls.equals(null)
+	
 			if (filePath.equalsIgnoreCase(JSONCrawler.FILE1)) {
 				assert successUrls.containsAll(MOCK_INTERNET1_SUCCESS)
 				assert skippedUrls.collect().containsAll(MOCK_INTERNET1_SKIPPED)
@@ -139,6 +140,7 @@ class JSONCrawler {
 				assert errorUrls.collect().containsAll(MOCK_INTERNET3_ERROR)
 				println "Links from $filePath crawled successfully!"
 			}
+			
 		}
 		validate()
 		 
