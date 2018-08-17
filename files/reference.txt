@@ -3,3 +3,4 @@ https://www.tutorialspoint.com/groovy/groovy_maps.htm
 http://docs.groovy-lang.org/next/html/documentation/working-with-collections.html
 http://docs.groovy-lang.org/latest/html/documentation/core-semantics.html#gpath_expressions
 http://groovy-lang.org/closures.html
+http://www.gpars.org/guide/guide/dataParallelism.html
